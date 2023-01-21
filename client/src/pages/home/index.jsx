@@ -6,6 +6,7 @@ import FeaturedCourses from "../courses-price";
 import ExploreTopSubject from "../Explore-top-subjects";
 import Hero from "../introduction";
 import Services from "../services-area";
+import TeamArea from "../team-area";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <AbourArea />
       <ExploreTopSubject />
       <About3Area />
+      <TeamArea />
     </div>
   );
 };
