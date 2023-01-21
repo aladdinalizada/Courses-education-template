@@ -1,0 +1,26 @@
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 35px;
+  margin: 40px 0;
+  .right {
+    width: 40%;
+    .head {
+      h2 {
+        color: #4255a4;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 50px;
+      }
+    }
+    .body {
+      .features-single {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+      }
+    }
+  }
+}

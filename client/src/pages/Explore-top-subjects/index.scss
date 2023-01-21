@@ -1,0 +1,76 @@
+.ExploreTopSubject {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      color: #4255a4;
+      font-size: 2.3rem;
+    }
+  }
+  .body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 90%;
+      .itemCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img {
+          position: relative;
+          .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+        }
+        &:hover {
+          .img {
+            opacity: 0.5;
+            span {
+              color: #4255a4;
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      border-radius: 7px;
+      width: 15%;
+      border: 1px solid #febd80;
+      color: #febd80;
+      text-decoration: none;
+      padding: 15px 10px;
+    }
+    &:hover {
+      a {
+        transition: 0.5s;
+        background-color: #febd80;
+        color: white;
+      }
+    }
+  }
+}
