@@ -1,7 +1,6 @@
 import "./App.css";
 import Footer from "./layouts/footer";
 import Header from "./layouts/header";
-import Hero from "./pages/introduction";
 import Routing from "./routing";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
         }}
         style={{
           position: "fixed",
-          padding: "1.3rem",
+          padding: "1rem",
           fontSize: "20px",
           bottom: "40px",
           right: "40px",
@@ -28,10 +27,13 @@ function App() {
           textAlignLast: "center",
           color: "#fff",
           textAlign: "center",
+          borderRadius: "50%",
+          border: "none",
         }}
       >
         <i class="fa-sharp fa-solid fa-turn-up" style={{
-          padding: "0.8rem",
+          padding: "0.1rem",
+          color: "#fff",
         }}></i>
       </button>
     </div>
