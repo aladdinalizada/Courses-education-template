@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import AbourArea from "../about-area";
+import Support from "../about2-area";
 import About3Area from "../about3-area";
 import FeaturedCourses from "../courses-price";
 import ExploreTopSubject from "../Explore-top-subjects";
@@ -25,6 +26,7 @@ const Home = () => {
       <ExploreTopSubject />
       <About3Area />
       <TeamArea />
+      <Support />
     </div>
   );
 };
