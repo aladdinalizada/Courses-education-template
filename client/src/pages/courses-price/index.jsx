@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./index.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Slide } from "react-slideshow-image";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const FeaturedCourses = () => {
   const [data, setData] = useState([]);
@@ -18,7 +16,12 @@ const FeaturedCourses = () => {
     getData();
   }, []);
 
-  console.log(data);
+  const handledetails = (e) => {
+    const id = e.target.id;
+    const details = data.find((item) => item.id === id);
+    window.location.href = `/details/${id}`;
+  };
+
   return (
     <div>
       <div className="box">
@@ -27,7 +30,7 @@ const FeaturedCourses = () => {
         </div>
         <div className="box-body">
           {data.slice(0, 3).map((item) => (
-            <div className="card">
+            <div className="card" key={item.id}>
               <div className="image">
                 <img src={item.image} alt="image" />
               </div>
@@ -56,8 +59,10 @@ const FeaturedCourses = () => {
                     <span>${item.price}</span>
                   </div>
                 </div>
-                <button>
-                  <Link>Find Out More</Link>
+                <button id={item.id}>
+                  <Link id={item.id} onClick={(e) => handledetails(e)}>
+                    Find Out More
+                  </Link>
                 </button>
               </div>
             </div>

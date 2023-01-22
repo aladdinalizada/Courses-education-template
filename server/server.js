@@ -80,4 +80,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => res.send(featured));
+// details page
+app.get("/details/:id", (req, res) => {
+  const id = req.params.id;
+  const course = featured.find((course) => course.id === parseInt(id));
+  res.send(course);
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
