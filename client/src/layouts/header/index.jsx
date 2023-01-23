@@ -1,7 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import "./index.scss";
 const Header = () => {
+  const handleJoinButton = () => {
+    window.location.href = "/pages/sign-up";
+  };
+  const handleLogInButton = () => {
+    window.location.href = "/pages/login";
+  };
   return (
     <div>
       <div className="container">
@@ -33,8 +40,12 @@ const Header = () => {
               </ul>
             </div>
             <div className="joinLoginBtn">
-              <button className="joinBtn">Join</button>
-              <button className="loginBtn">Log In</button>
+              <button className="joinBtn" onClick={() => handleJoinButton()}>
+                Join
+              </button>
+              <button className="loginBtn" onClick={() => handleLogInButton()}>
+                Log In
+              </button>
             </div>
           </div>
         </div>

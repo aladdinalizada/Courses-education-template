@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.5",
+    "formik": "^2.2.9",
     "helmet": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,7 +20,8 @@
     "react-router-dom": "^6.7.0",
     "react-slideshow-image": "^4.2.0",
     "sass": "^1.57.1",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

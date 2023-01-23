@@ -75,7 +75,13 @@ let featured = [
       "https://preview.colorlib.com/theme/courses/assets/img/gallery/featured3.png.webp",
   },
 ];
-
+let users = [
+  {
+    id: 1,
+    email: "admin",
+    password: "admin",
+  },
+];
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -85,6 +91,19 @@ app.get("/details/:id", (req, res) => {
   const id = req.params.id;
   const course = featured.find((course) => course.id === parseInt(id));
   res.send(course);
+});
+app.get("/userdata", (req, res) => {
+  res.send(users);
+});
+// post data
+app.post("/userdata", (req, res) => {
+  const user = {
+    id: users.length + 1,
+    email: req.body.email,
+    password: req.body.password,
+  };
+  users.push(user);
+  res.send(user);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
