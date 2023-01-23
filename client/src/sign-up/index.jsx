@@ -8,7 +8,6 @@ const SignUp = () => {
     const response = await fetch("http://localhost:3000/userdata");
     const data = await response.json();
     setData(data);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -22,7 +21,24 @@ const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const submit = () => {
-    console.log(formValues);
+    // console.log(formValues);
+    data.find((item) => {
+      if (
+        item.email === formValues.email &&
+        item.password === formValues.password
+      ) {
+        // console.log("Login successfully");
+        setTimeout(() => {
+          window.location.href = "/";
+          alert("Login successfully");
+        }, 3000);
+      } else {
+        // console.log("Login failed");
+        alert("Login failed");
+      }
+    });
+
+    // setFormValues(intialValues);
   };
 
   //input change handler
@@ -46,13 +62,13 @@ const SignUp = () => {
     if (!values.email) {
       errors.email = "Cannot be blank";
     } else if (!regex.test(values.email)) {
-      errors.email = "Invalid email format";
+      errors.email = "Cannot found email";
     }
 
     if (!values.password) {
       errors.password = "Cannot be blank";
     } else if (values.password.length < 4) {
-      errors.password = "Password must be more than 4 characters";
+      errors.password = "Password is incorrect";
     }
 
     return errors;
@@ -74,7 +90,7 @@ const SignUp = () => {
           <p>Login Community</p>
         </div>
         <div className="body">
-          <form onSubmit={handleSubmit} noValidate>
+          <form onSubmit={(e) => handleSubmit(e)} noValidate>
             <div className="form-row">
               <label htmlFor="email">Email</label>
               <input
@@ -105,9 +121,9 @@ const SignUp = () => {
               )}
             </div>
 
-            <button type="submit">Sign In</button>
+            <button type="submit">Log In</button>
             {Object.keys(formErrors).length === 0 && isSubmitting && (
-              <span className="success-msg">Form submitted successfully</span>
+              <span className="success-msg">Login successfully</span>
             )}
           </form>
         </div>

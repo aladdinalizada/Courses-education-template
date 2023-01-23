@@ -78,7 +78,7 @@ let featured = [
 let users = [
   {
     id: 1,
-    email: "admin",
+    email: "admin@mail.ru",
     password: "admin",
   },
 ];
