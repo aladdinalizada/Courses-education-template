@@ -14,10 +14,12 @@ const Header = () => {
       <div className="container">
         <div className="header">
           <div className="leftLogo">
-            <img
-              src="https://preview.colorlib.com/theme/courses/assets/img/logo/logo.png.webp"
-              alt=""
-            />
+            <Link to="/">
+              <img
+                src="https://preview.colorlib.com/theme/courses/assets/img/logo/logo.png.webp"
+                alt=""
+              />
+            </Link>
           </div>
           <div className="navButtonsRight">
             <div className="navButton">
