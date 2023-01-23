@@ -24,3 +24,23 @@
     }
   }
 }
+@media only screen and (max-width: 867px) {
+  .area {
+    flex-direction: column;
+    row-gap: 20px;
+    .right {
+      width: 100%;
+      .head {
+        h2 {
+          text-align: center;
+        }
+      }
+      .body {
+        .features-single {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
